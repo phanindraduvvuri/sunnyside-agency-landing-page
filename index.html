@@ -12,7 +12,24 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="styles/main.css" />
     <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <script src="js/script.js" defer></script>
 
     <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
     <style>
@@ -26,6 +43,40 @@
     </style>
   </head>
   <body>
+    <header>
+      <nav class="nav">
+        <div class="logo">
+          <img src="images/logo.svg" alt="Company Logo" />
+        </div>
+
+        <ul class="nav-items">
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-button">Contact</a>
+          </li>
+        </ul>
+
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="hero-text">We Are Creatives</h1>
+        <div
+          class="hero-arrow animate__animated animate__fadeIn animate__delay-1s"
+        >
+          <img src="images/icon-arrow-down.svg" alt="" />
+        </div>
+      </section>
+    </main>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
