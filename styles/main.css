@@ -391,4 +391,43 @@ h3 {
   .gallery {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+footer {
+  background-color: hsl(168deg, 34%, 41%);
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+footer .footer__logo {
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+footer .footer__logo svg {
+  fill: hsl(167deg, 40%, 24%);
+}
+footer .footer__nav {
+  margin-bottom: 3rem;
+}
+footer .footer__nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .footer__nav ul a {
+  text-decoration: none;
+  color: hsl(167deg, 40%, 24%);
+}
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 700px) {
+  footer .footer__nav ul {
+    justify-content: center;
+    gap: 4rem;
+  }
 }/*# sourceMappingURL=main.css.map */

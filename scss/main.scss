@@ -376,3 +376,53 @@ h3 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+footer {
+  background-color: $dark-moderate-cyan;
+  display: flex;
+  // align-items: center;
+  flex-direction: column;
+  padding-top: 4rem;
+
+  .footer__logo {
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    svg {
+      fill: $dark-saturated-cyan;
+    }
+  }
+
+  .footer__nav {
+    margin-bottom: 3rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-evenly;
+
+      a {
+        text-decoration: none;
+        color: $dark-saturated-cyan;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  footer {
+    .footer__nav {
+      ul {
+        justify-content: center;
+        gap: 4rem;
+      }
+    }
+  }
+}
