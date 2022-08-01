@@ -212,7 +212,6 @@ h3 {
     background-color: hsl(0deg, 0%, 100%);
     transform-origin: 100% 0%;
     transform: scale(0);
-    transition: transform 0.3s ease-in;
     -webkit-clip-path: polygon(0 10%, 92% 10%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 10%, 92% 10%, 100% 0, 100% 100%, 0 100%);
   }
@@ -224,6 +223,161 @@ h3 {
     color: black;
   }
   .nav-items.active {
+    transition: transform 0.3s ease-in;
     transform: scale(1);
   }
+}
+.service {
+  display: grid;
+  place-items: center;
+}
+.service .service__link {
+  text-decoration: none;
+  color: hsl(212deg, 27%, 19%);
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+}
+.service .service__link::after {
+  position: absolute;
+  bottom: 0;
+  left: -3px;
+  content: " ";
+  height: 7px;
+  width: calc(100% + 4px);
+  z-index: -1;
+  border-radius: 100vw;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+.service .service__link:hover::after {
+  opacity: 1;
+}
+.service:first-of-type .service__link::after {
+  background-color: hsl(51deg, 100%, 49%);
+}
+.service:nth-of-type(2) .service__link::after {
+  background-color: hsl(7deg, 99%, 70%);
+}
+
+.service__header {
+  line-height: 1;
+  color: hsl(212deg, 27%, 19%);
+  padding-bottom: 2rem;
+}
+
+.service__body {
+  color: hsl(232deg, 10%, 55%);
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .service {
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service:nth-child(odd) .service__image {
+    order: 2;
+  }
+  .service__content {
+    padding: 0rem 3rem;
+  }
+  .service__header {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
+@media screen and (max-width: 700px) {
+  .service {
+    flex-direction: column;
+    text-align: center;
+  }
+  .service__content {
+    padding: 3rem 2rem;
+  }
+  .service__header {
+    font-size: 2.7rem;
+  }
+}
+#projects {
+  display: grid;
+}
+
+@media screen and (min-width: 700px) {
+  #projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.project {
+  position: relative;
+  display: grid;
+  grid-template: "container";
+  place-items: end;
+}
+
+.project > * {
+  grid-area: container;
+}
+
+.project__content {
+  text-align: center;
+  padding-inline: 4rem;
+}
+.project__content .project__header {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+.project__content .project__body {
+  margin-bottom: 3rem;
+}
+
+#graphic-design {
+  color: hsl(168deg, 34%, 41%);
+}
+
+#photography {
+  color: hsl(198deg, 62%, 26%);
+}
+
+.testimonial__header {
+  text-align: center;
+  letter-spacing: 3px;
+  color: hsl(210deg, 4%, 67%);
+  margin-top: 4rem;
+}
+
+.testimonials__cards {
+  padding-inline: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.testimonial__card {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial__card .client__image img {
+  border-radius: 100vw;
+  width: 6em;
+  margin-bottom: 2rem;
+}
+.testimonial__card .client__testimony {
+  color: hsl(198deg, 62%, 26%);
+  margin-bottom: 2rem;
+  line-height: 1.9;
+}
+.testimonial__card .client__name {
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+  margin-bottom: 0.5em;
+}
+.testimonial__card .client__role {
+  color: hsl(210deg, 4%, 67%);
+  font-size: 0.875rem;
 }/*# sourceMappingURL=main.css.map */
