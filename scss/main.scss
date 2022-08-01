@@ -330,7 +330,7 @@ h3 {
 .testimonials__cards {
   padding-inline: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .testimonial__card {
@@ -362,5 +362,17 @@ h3 {
   .client__role {
     color: $grayish-blue;
     font-size: 0.875rem;
+  }
+}
+
+.gallery {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
